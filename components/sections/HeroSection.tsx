@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useRef } from 'react'
-import Image from 'next/image'
+
 import type { Profile, Badge } from '@/types'
 
 export default function HeroSection({ profile, badges }: { profile: Profile | null; badges: Badge[] }) {
@@ -141,12 +141,10 @@ export default function HeroSection({ profile, badges }: { profile: Profile | nu
           {profile?.avatar_url && (
             <div className="hero-avatar">
               <div className="hero-avatar-img">
-                <Image
+                <img
                   src={profile.avatar_url}
                   alt={profile.name}
-                  fill
-                  style={{ objectFit: 'cover' }}
-                  sizes="140px"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                 />
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: 5, marginTop: 8, fontFamily: 'Share Tech Mono, monospace', fontSize: 9, color: 'var(--muted)', letterSpacing: 1 }}>

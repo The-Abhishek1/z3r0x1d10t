@@ -5,6 +5,9 @@ const nextConfig = {
       { protocol: 'https', hostname: '*.supabase.co' },
       { protocol: 'https', hostname: 'avatars.githubusercontent.com' },
     ],
+    // Allow GIFs and all formats without optimization stripping animation
+    unoptimized: false,
+    formats: ['image/webp'],
   },
   serverExternalPackages: [],
   async rewrites() {
