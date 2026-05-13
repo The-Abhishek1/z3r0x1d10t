@@ -29,6 +29,7 @@ export interface Project {
   demo_url?: string
   github_url?: string
   image_url?: string
+  video_url?: string
   featured: boolean
   sort_order: number
   created_at: string
@@ -51,6 +52,8 @@ export interface Writeup {
   difficulty: 'easy' | 'medium' | 'hard' | 'insane'
   content?: string
   external_url?: string
+  cover_image_url?: string
+  attachment_url?: string
   machine_os?: string
   tags: string[]
   published: boolean
@@ -62,9 +65,9 @@ export interface Cheatsheet {
   title: string
   category: string
   entries: { label: string; cmd: string }[]
+  reference_url?: string
   sort_order: number
 }
-
 export interface Badge {
   id: string
   label: string
