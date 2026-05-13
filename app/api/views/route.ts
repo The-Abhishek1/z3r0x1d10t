@@ -1,14 +1,17 @@
 import { NextResponse } from 'next/server'
-import { supabaseAdmin } from '@/lib/supabase'
+import { createClient } from '@supabase/supabase-js'
 
 export async function POST() {
   try {
-    await supabaseAdmin()
-      .from('views')
-      .update({ count: supabaseAdmin().rpc('increment_views') })
-      .eq('id', 1)
+    const admin = createClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL!,
+      process.env.SUPABASE_SERVICE_ROLE_KEY!,
+      { auth: { autoRefreshToken: false, persistSession: false } }
+    )
+    const { error } = await admin.rpc('increment_views')
+    if (error) throw error
     return NextResponse.json({ ok: true })
-  } catch {
-    return NextResponse.json({ ok: false })
+  } catch (e) {
+    return NextResponse.json({ ok: false }, { status: 500 })
   }
 }
