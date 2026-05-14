@@ -29,7 +29,7 @@ export default async function Home() {
     supabase.from('profile').select('*').single(),
     supabase.from('stats').select('*').order('sort_order'),
     supabase.from('projects').select('*').order('sort_order'),
-    supabase.from('timeline').select('*').order('sort_order'),
+    supabase.from('timeline').select('*').order('date_sort', { ascending: false }),
     supabase.from('writeups').select('*').eq('published', true).order('created_at', { ascending: false }),
     supabase.from('cheatsheets').select('*').order('sort_order'),
     supabase.from('badges').select('*').order('sort_order'),
