@@ -26,7 +26,7 @@ export default async function WriteupPage({ params }: { params: Promise<{ id: st
           display: flex; align-items: center; justify-content: space-between;
         }
         .wr-wrap { max-width: 820px; margin: 0 auto; padding: 80px 1.5rem 4rem; }
-        .wr-cover { width: 100%; max-height: 300px; object-fit: cover; display: block; border: 1px solid var(--border); margin-bottom: 2rem; }
+        .wr-cover { width: 100%; height: auto; display: block; border: 1px solid var(--border); margin-bottom: 2rem; }
         .wr-meta { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 1.5rem; }
         .wr-title { font-family: Orbitron, monospace; font-size: clamp(1.4rem,4vw,2.2rem); font-weight: 900; color: var(--green); letter-spacing: 2px; margin-bottom: 1rem; line-height: 1.2; }
         .wr-body { color: var(--text); font-size: 14px; line-height: 1.9; }
