@@ -8,9 +8,9 @@ export async function generateMetadata(): Promise<Metadata> {
   const { data: profile } = await supabase.from('profile').select('name,tagline,avatar_url').single()
 
   return {
-    title: `${profile?.name || '0xIdiot'} — Cybersecurity Engineer`,
+    title: `${profile?.name || 'z3r0x1d10t'} — Cybersecurity Engineer`,
     description: profile?.tagline || 'Cybersecurity Engineer & Full-Stack Developer. TryHackMe Top 1%.',
-    keywords: ['cybersecurity', 'penetration testing', 'ethical hacking', 'CTF', 'Abhishek N', '0xIdiot'],
+    keywords: ['cybersecurity', 'penetration testing', 'ethical hacking', 'CTF', 'Abhishek N', 'z3r0x1d10t'],
     icons: {
       icon: profile?.avatar_url || '/favicon.ico',
       apple: profile?.avatar_url || '/favicon.ico',
