@@ -39,7 +39,7 @@ export default async function Home() {
 
   return (
     <>
-      <Nav alias={profile?.alias || '0xIdiot'} />
+      <Nav alias={profile?.alias || 'z3r0x1d10t'} />
       <main>
         <HeroSection profile={profile} badges={badges || []} />
         <StatsSection stats={stats || []} />
@@ -49,7 +49,7 @@ export default async function Home() {
         <CheatsheetsSection cheatsheets={cheatsheets || []} />
         <ContactSection links={contactLinks || []} bmcUsername={profile?.bmc_username} />
       </main>
-      <Footer alias={profile?.alias || '0xIdiot'} viewCount={views?.count || 0} />
+      <Footer alias={profile?.alias || 'z3r0x1d10t'} viewCount={views?.count || 0} />
       <ViewCounter />
     </>
   )

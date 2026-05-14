@@ -16,7 +16,7 @@ export async function generateMetadata(): Promise<Metadata> {
       apple: profile?.avatar_url || '/favicon.ico',
     },
     openGraph: {
-      title: profile?.name || '0xIdiot',
+      title: profile?.name || 'z3r0x1d10t',
       description: profile?.tagline || 'Cybersecurity Engineer & Full-Stack Developer',
       images: profile?.avatar_url ? [profile.avatar_url] : [],
     },
