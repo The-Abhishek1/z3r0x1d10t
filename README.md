@@ -1,4 +1,4 @@
-# 0xIdiot Portfolio — Setup Guide
+# Z3r0x1d10t Portfolio — Setup Guide
 
 ## Stack
 - **Next.js 14** (App Router) — frontend + API routes
